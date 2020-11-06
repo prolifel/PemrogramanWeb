@@ -7,9 +7,19 @@
     
     if($cek){
         $_SESSION['username']=$username; 
-        ?>Anda berhasil login. silahkan menuju <a href="home.php">Halaman HOME</a><?php
+        ?>
+        <script>
+            window.location = 'home.php'
+        </script>
+        <?php
+        // header("Location: home.php");
+        exit();
     }else{
-        ?>Anda gagal login. silahkan <a href="form_admin.php">Login kembali</a><?php
-        echo (" ". mysqli_error($koneksi));
+        ?>
+        <script>
+            alert("Username atau password salah. Silakan login kembali");
+            window.location = 'form_admin.php'
+        </script>
+        <?php
     }
 ?> 
