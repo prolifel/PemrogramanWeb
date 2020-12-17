@@ -43,7 +43,14 @@
         echo json_encode($m);
 
         $log = mysqli_query($koneksi, "insert into log(nama) values ('$username')");
+        $queryLog = mysqli_query($koneksi, "select * from log");
+
+        header("Location: ./log.php");
     }else{
-        echo "Gagal";
+        ?> 
+            <script>
+                alert("Username atau password salah!");
+            </script>
+        <?php
     }
 ?>

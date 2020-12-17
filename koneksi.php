@@ -15,8 +15,8 @@
 
     //cek koneksi
     if($koneksi){
-        echo "berhasil koneksi";
+        // echo "berhasil koneksi";
     }else{
-        echo "gagal koneksi";
+        // echo "gagal koneksi";
     }
 ?> 
